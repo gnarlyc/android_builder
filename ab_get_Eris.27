@@ -1,0 +1,14 @@
+if [ ! -d $KITCHEN_ROOT/source/kernels/eris/2.6.27/ ]
+   then
+      mkdir -p $KITCHEN_ROOT/source/kernels/eris/2.6.27/
+
+      clear
+      echo "Downloading Eris 2.6.27 kernel source code"
+      wget http://member.america.htc.com/download/RomCode/Source_and_Binaries/desirec-be918f7b.tgz
+      tar zxvf desirec-be918f7b.tgz
+
+      cp -r kernel_msm7k/* $KITCHEN_ROOT/source/kernels/eris/2.6.27/
+      rm -r kernel_msm7k/
+      rm desirec-*
+fi
+

@@ -1,0 +1,18 @@
+
+clear
+
+if [ ! -d $KITCHEN_ROOT/source/kernels/buzz/2.6.29/ ]
+   then
+       mkdir -p $KITCHEN_ROOT/source/kernels/buzz/2.6.29
+
+       cd $KITCHEN_ROOT/source/kernels/buzz/2.6.29
+       echo "Downloading Buzz 2.6.29 kernel source code"
+       wget http://member.america.htc.com/download/RomCode/Source_and_Binaries/buzz-2.6.29-534e5f81.tar.gz
+       tar xvzf buzz-2.6.29-534e5f81.tar.gz
+
+       cp -r buzz-2.6.29-534e5f81/* $KITCHEN_ROOT/source/kernels/buzz/2.6.29/
+       rm -r buzz-2.6.29-534e5f81/
+       rm buzz-2.6.29-534e5f81.t*
+fi
+
+

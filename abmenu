@@ -1,0 +1,66 @@
+#!/bin/bash
+# Thanks to dsixa from XDA for the kitchen. This is really awesome work.
+# I totally used these scripts as a template. No credit for orignal work for me.
+# I just think it's a good fit to add the kernel building scripts from Coralic.nl
+# to this kitchen. It seems to make it more complete.
+#
+# I requested and received permission from dsixda and Armin Coralic on 6/3/10 to use
+# their code.
+#
+# I've tried not to use the same option numbers as the kitchen, just in case someone
+# wants to just integrate the two menus on their own. I'm not doing it because of
+# split support issues that might result.
+#
+# No one takes resposibility (especially me), if you do something that bricks your phone.
+# 
+
+if [ -f menu ]
+  then 
+    export KITCHEN_ROOT=`pwd`
+  else 
+    echo "Please copy 'abmenu' to the root of your kitchen folder with 'menu'"; exit 0;
+fi
+
+export AOSP_VERSION=
+export KERNEL_DIR=
+
+
+sudo scripts/ab_setup
+
+while :
+do
+ clear
+
+clear_screen=yes
+
+ echo 
+ echo "==================================================================="
+ echo " Android Builder 0.4 - by gnarlyc (xda-developers.com)"
+ echo " (This would not be possible without code and help from dsixda," 
+ echo " cteneyck, and Armin Coralic.)" 
+ echo "==================================================================="
+ echo
+ echo " Select the device that you would like to build for."
+ echo ""
+ echo "  1) HTC Droid Eris"
+# echo "  2) HTC Hero"
+# echo "  3) G1" 
+ echo ""
+ echo " 0. Exit"
+ echo ""
+ echo -n "Please enter option number: "
+ read opt
+ case $opt in
+   1) clear; scripts/ab_pick_version_eris;;
+   0) exit 1;;
+   *) echo "Invalid option"; clear_screen=no;;
+ esac
+
+ if [ "$clear_screen" == "yes" ]
+ then
+   echo
+   echo "Press Enter to continue"
+   read enterKey
+ fi
+
+done

@@ -1,0 +1,1 @@
+cp -r $KITCHEN_ROOT/prop/* $AOSP_ROOT/out/target/product/generic/system/
