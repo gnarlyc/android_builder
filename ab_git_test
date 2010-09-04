@@ -15,5 +15,5 @@ cp $KITCHEN_ROOT/prop/* $KITCHEN_ROOT/source/projects/froyo/vendor/htc/desirec/p
 cd ../../../
 source build/envsetup.sh
 lunch full_desirec-userdebug
-make -j(grep -c processor /proc/cpuinfo)
+make -j$(grep -c processor /proc/cpuinfo)
 

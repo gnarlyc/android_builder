@@ -8,7 +8,7 @@ clear
 echo "Compiling Android Open Source Project..."
 
 $KITCHEN_ROOT/scripts/ab_git_test
-#make -j(grep -c processor /proc/cpuinfo)
+#make -j$(grep -c processor /proc/cpuinfo)
 
 #cd out/target/product/generic/
 cd out/target/product/desirec/
