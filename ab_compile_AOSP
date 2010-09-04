@@ -8,9 +8,8 @@ clear
 echo "Compiling Android Open Source Project..."
 
 $KITCHEN_ROOT/scripts/ab_git_test
-#make -j4
+#make -j(grep -c processor /proc/cpuinfo)
 
-echo "Copying AOSPbase.zip to Kitchen (original_update folder)"
 #cd out/target/product/generic/
 cd out/target/product/desirec/
 
@@ -23,6 +22,7 @@ rm -r system/core
 rm -r system/extras
 rm -r system/wlan
 
+echo "Copying AOSPbase.zip to Kitchen (original_update folder)"
 zip -r $KITCHEN_ROOT/original_update/AOSPbase.zip system/ META-INF/ boot.img
 
 clear
