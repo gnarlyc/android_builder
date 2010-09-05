@@ -20,6 +20,8 @@ if [ -f menu ]
     export KITCHEN_ROOT=`pwd` 
 fi
 
+chmod a+x scripts/plugins/AB/*
+
 export AOSP_VERSION= 
 export KERNEL_DIR=
 
