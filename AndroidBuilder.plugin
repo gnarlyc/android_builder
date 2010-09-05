@@ -15,15 +15,15 @@
 # No one takes resposibility (especially me), if you do something that bricks your phone.
 # 
 
+if [ -f menu ]
+  then
+    export KITCHEN_ROOT=`pwd` 
+fi
 
-export AOSP_VERSION=
+export AOSP_VERSION= 
 export KERNEL_DIR=
 
-sudo scripts/plugins/AB/ab_setup
-
-while :
-do
- clear
+clear
 
 clear_screen=yes
 

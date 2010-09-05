@@ -20,7 +20,7 @@ if [ ! -d builder/bin ]
       mkdir builder/bin
 fi
 
-export PATH=$PATH:builder/bin
+export PATH=$PATH:$KITCHEN_ROOT/builder/bin
 curl http://android.git.kernel.org/repo > builder/bin/repo
 chmod a+x builder/bin/repo
 
