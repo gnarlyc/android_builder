@@ -10,7 +10,7 @@ cp tools/.config-$KERNEL_VER .
 export ARCH=arm
 export CROSS_COMPILE=arm-eabi-
 export PATH=$PATH:/builder/source/projects/$AOSP_VERSION/prebuilt/linux-x86/toolchain/arm-eabi-4.4.0/bin
-make -j4
+make -j$(grep -c processor /proc/cpuinfo)
 
 cp $KERNEL_DIR/arch/arm/boot/zImage builder/source/projects/$AOSP_VERSION/out/target/product/generic/boot.img-kernel
 
