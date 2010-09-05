@@ -1,0 +1,71 @@
+HTC Expresso T-Mobile mTouch 3G Slide - Éclair -2.6.29 kernel source code
+http://member.america.htc.com/download/RomCode/Source_and_Binaries/espresso-2.6.29-b2c573d7.tar.gz
+
+HTC EVO 4G (Sprint) - Froyo MR - 2.6.32 kernel source code
+http://member.america.htc.com/download/RomCode/Source_and_Binaries/supersonic-2.6.32.15-g746f4f0.tar.gz
+
+Droid Incredible by HTC (Verizon) - Froyo MR - 2.6.32 kernel source code
+http://member.america.htc.com/download/RomCode/Source_and_Binaries/incrediblec-2.6.32.15-gb7b01d1.tar.gz
+
+HTC Wildfire - Éclair - 2.6.29 kernel source code
+http://member.america.htc.com/download/RomCode/Source_and_Binaries/buzz-2.6.29-534e5f81.tar.gz
+
+HTC Aria - Éclair - 2.6.29 kernel source code
+http://member.america.htc.com/download/RomCode/Source_and_Binaries/liberty-2.6.29-21f066a6.tar.gz
+
+HTC EVO 4G (Sprint) - Éclair - 2.6.29 kernel source code
+http://member.america.htc.com/download/RomCode/Source_and_Binaries/evo_4g-2.6.29-e1cabff5.tar.gz
+
+HTC Hero (Sprint) - Éclair MR - 2.6.29 kernel source code
+http://member.america.htc.com/download/RomCode/Source_and_Binaries/heroc-2.6.29-bc0d2cff.tar.gz
+
+
+HTC Hero - Éclair MR - 2.6.29 kernel source code
+http://member.america.htc.com/download/RomCode/Source_and_Binaries/hero-2.6.29-5f74b252.tar.gz
+
+----------------------------------------------------------------------------------------------------
+
+HTC Bravo (Desire)
+http://member.america.htc.com/download/RomCode/Source_and_Binaries/bravo_54b7033a.tar.gz
+
+eclair 2.6.29
+
+Droid Incredible by HTC(Verizon) Kernel Source Code 56.0 MB 2010/04/30 (http://member.america.htc.com/download/RomCode/Source_and_Binaries/incrediblec_cc1c2268.tar.bz2)
+
+eclair 2.6.29
+
+Droid Eris MR by HTC (Verizon) Kernel Source Code 56.3 MB 2010/04/30 (http://member.america.htc.com/download/RomCode/Source_and_Binaries/desirec_2.6.29_8a03cb9a.tar.bz2)
+
+eclair mr 2.6.29
+
+HTC Legend Kernel Source Code 56.0 MB 2010/04/30 (http://member.america.htc.com/download/RomCode/Source_and_Binaries/kernel_legend_13be9c9c.tar.bz2)
+
+eclair 2.6.29
+
+Droid Eris by HTC (Verizon) 63.7 MB 2010/02/01 
+(http://member.america.htc.com/download/RomCode/Source_and_Binaries/desirec-be918f7b.tgz)
+
+cupcake 2.6.27
+
+HTC Tattoo Kernel Source Code 71.4 MB 2010/01/22 
+(http://member.america.htc.com/download/RomCode/Source_and_Binaries/click-656120.tar.gz)
+
+donut 2.6.29
+
+HTC Hero (Sprint) Kernel Source Code 49.7 MB 2010/01/22 (http://member.america.htc.com/download/RomCode/Source_and_Binaries/heroc_ef05d31a.tar.bz2)
+
+cupcake 2.6.27
+
+HTC Hero Kernel Source Code 49.6 MB 2009/10/22 (http://member.america.htc.com/download/RomCode/Source_and_Binaries/kernel_hero_0078c992.tar.bz2)
+
+cupcake 2.6.27
+
+HTC Magic Kernel Source Code 49.5 MB 2009/07/30 (http://member.america.htc.com/download/RomCode/Source_and_Binaries/sapphire.hep-357975db.tar.bz2)
+
+cupcake 2.6.27
+
+HTC Dream Kernel Source Code 49.7 MB 2009/07/30 
+(http://member.america.htc.com/download/RomCode/Source_and_Binaries/dream_9af60ed4.tar.bz2)
+
+2.6.27
+

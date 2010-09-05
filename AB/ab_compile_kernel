@@ -1,0 +1,46 @@
+clear
+echo "Compiling kernel..."
+
+cd $KERNEL_DIR
+
+#make desirec_defconfig
+
+cp tools/.config-$KERNEL_VER .
+
+export ARCH=arm
+export CROSS_COMPILE=arm-eabi-
+export PATH=$PATH:/builder/source/projects/$AOSP_VERSION/prebuilt/linux-x86/toolchain/arm-eabi-4.4.0/bin
+make -j4
+
+cp $KERNEL_DIR/arch/arm/boot/zImage builder/source/projects/$AOSP_VERSION/out/target/product/generic/boot.img-kernel
+
+clear
+echo "Building boot.img and copying to AOSP working folder"
+
+cd builder/source/projects/$AOSP_VERSION/out/target/product/generic
+mv root/ boot.img-ramdisk/
+
+scripts/plugins/AB/ab_build_mkboot
+
+tools/mkbootfs boot.img-ramdisk | gzip > ramdisk-boot
+tools/mkbootimg --kernel boot.img-kernel --ramdisk ramdisk-boot --cmdline "no_console_suspend=1 console=null" -o boot.img --base 0x11200000
+
+if [ ! -f boot.img ]
+   then
+   echo "NO boot.img!!!"
+   sleep 10
+fi
+
+clear
+echo "Compiling WLAN driver..."
+
+if [ ! -d builder/source/projects/$AOSP_VERSION/out/target/product/generic/system/lib/modules/ ]
+   then
+      mkdir builder/source/projects/$AOSP_VERSION/out/target/product/generic/system/lib/modules/
+fi
+
+cd builder/source/projects/$AOSP_VERSION/system/wlan/ti/sta_dk_4_0_4_32/
+
+make -j4
+
+cp wlan.ko builder/source/projects/$AOSP_VERSION/out/target/product/generic/system/lib/modules/ 
