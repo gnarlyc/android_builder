@@ -17,7 +17,7 @@ mkdir -p $KITCHEN_ROOT/builder/source/projects/froyo/
 
 if [ ! -d $KITCHEN_ROOT/builder/bin ]
    then
-      $KITCHEN_ROOT/mkdir $KITCHEN_ROOT/builder/bin
+      mkdir $KITCHEN_ROOT/builder/bin
 fi
 
 export PATH=$PATH:$KITCHEN_ROOT/builder/bin

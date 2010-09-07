@@ -15,12 +15,12 @@
 # No one takes resposibility (especially me), if you do something that bricks your phone.
 # 
 
-if [ -f menu ]
-  then
-    export KITCHEN_ROOT=`pwd` 
-fi
+export KITCHEN_ROOT=`pwd` 
 
-chmod a+x scripts/plugins/AB/*
+sleep 10
+echo $KITCHEN_ROOT
+
+chmod a+x $KITCHEN_ROOT/scripts/plugins/AB/*
 
 export AOSP_VERSION= 
 export KERNEL_DIR=
@@ -59,7 +59,7 @@ clear_screen=yes
  read opt
  case $opt in
    1) clear; scripts/plugins/AB/ab_pick_version_aosp;;
-   2) clear; scripts/plugins/AB/ab_pick_version_eris;;
+   2) clear; $KITCHEN_ROOT/scripts/plugins/AB/ab_pick_version_eris;;
    a) clear; scripts/plugins/AB/ab_about;;
 #  u) clear; scripts/plugins/AB/ab_update;;
    0) exit 1;;
@@ -73,4 +73,4 @@ clear_screen=yes
    read enterKey
  fi
 
-done
+exit 1
