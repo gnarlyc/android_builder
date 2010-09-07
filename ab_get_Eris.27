@@ -1,0 +1,14 @@
+if [ ! -d builder/source/kernels/eris/2.6.27/ ]
+   then
+      mkdir -p builder/source/kernels/eris/2.6.27/
+
+      clear
+      echo "Downloading Eris 1.5 source code"
+      wget http://member.america.htc.com/download/RomCode/Source_and_Binaries/desirec-be918f7b.tgz
+      tar zxvf desirec-be918f7b.tgz
+
+      cp -r kernel_msm7k/* builder/source/kernels/eris/2.6.27/
+      rm -r kernel_msm7k/
+      rm desirec-*
+fi
+

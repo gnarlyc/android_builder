@@ -1,0 +1,29 @@
+clear 
+echo "Switching to Java5, which is needed to compile AOSP"
+sudo update-java-alternatives -s java-1.5.0-sun
+
+cd $KITCHEN_ROOT/builder/source/projects/$AOSP_VERSION
+
+clear
+echo "Compiling Android Open Source Project..."
+
+make -j$(grep -c processor /proc/cpuinfo)
+
+echo "Copying AOSPbase.zip to Kitchen (original_update folder)"
+cd out/target/product/generic/
+
+mkdir -p META-INF/com/google/android/
+cp $KITCHEN_ROOT/scripts/plugins/AB/basic-update-script META-INF/com/google/android/update-script
+
+$KITCHEN_ROOT/scripts/plugins/AB/ab_compile_kernel
+
+rm -r system/core
+rm -r system/extras
+rm -r system/wlan
+
+zip -r $KITCHEN_ROOT/original_update/AOSPbase.zip system/ META-INF/ boot.img
+
+clear
+echo "Switching back to Java6, which is needed in the Kitchen to sign updates"
+sudo update-java-alternatives -s java-6-sun
+

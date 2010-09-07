@@ -1,0 +1,47 @@
+#!/bin/bash
+
+while :
+do
+ clear
+
+clear_screen=yes
+
+ echo " About Android Builder"
+ echo "==================================================================="
+ echo " A word of Thanks To The Following"
+ echo
+ echo " Dsixda - Creator of The HTC Android Kitchen (Xda-developers.com)"
+ echo " This is really awesome work! I totally used these scripts "
+ echo " as a template. No credit for orignal work for me. "
+ echo
+ echo " Armin Coralic  - blog.coralic.nl - Kernel Building scripts"
+ echo " I just think it's a good fit to add the kernel building scripts"
+ echo " to this kitchen to make it more complete."
+ echo
+ echo " Cteneyck  -  used some code from cteneyck's tutorial"
+ echo " http://forum.xda-developers.com/showthread.php?t=622916"
+ echo
+ echo " I requested and received permission from dsixda, Armin Coralic"
+ echo " and cteneyck to use their code. "
+ echo 
+ echo " No one takes resposibility (especially me), if you do something"
+ echo " that bricks your phone."
+ echo "==================================================================="
+ echo
+ echo "Thanks for reading!"
+ echo "  0) Exit"
+ echo -n "Please enter option number: "
+ read opt
+ case $opt in
+   0) exit 1;;
+   *) echo "Invalid option"; clear_screen=no;;
+ esac
+
+ if [ "$clear_screen" == "yes" ]
+ then
+   echo
+   echo "Press Enter to continue"
+   read enterKey
+ fi
+
+done
