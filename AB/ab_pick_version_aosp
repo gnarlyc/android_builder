@@ -21,10 +21,10 @@ clear_screen=yes
  echo -n "Please enter option number: "
  read opt
  case $opt in
-   1) clear; export AOSP_VERSION=cupcake; scripts/plugins/AB/ab_create_repo_cupcake; scripts/plugins/AB/ab_compile_AOSP_Generic;;
-   2) clear; export AOSP_VERSION=donut; scripts/plugins/AB/ab_create_repo_donut; scripts/plugins/AB/ab_compile_AOSP_Generic;;
-   3) clear; export AOSP_VERSION=eclair; scripts/plugins/AB/ab_create_repo_eclair; scripts/plugins/AB/ab_compile_AOSP_Generic;;
-   4) clear; export AOSP_VERSION=froyo; scripts/plugins/AB/ab_create_repo_froyo; scripts/plugins/AB/ab_compile_AOSP_Generic;;
+   1) clear; export AOSP_VERSION=cupcake; $KITCHEN_ROOT/scripts/plugins/AB/ab_create_repo_cupcake; $KITCHEN_ROOT/scripts/plugins/AB/ab_compile_AOSP_Generic;;
+   2) clear; export AOSP_VERSION=donut; $KITCHEN_ROOT/scripts/plugins/AB/ab_create_repo_donut; $KITCHEN_ROOT/scripts/plugins/AB/ab_compile_AOSP_Generic;;
+   3) clear; export AOSP_VERSION=eclair; $KITCHEN_ROOT/scripts/plugins/AB/ab_create_repo_eclair; $KITCHEN_ROOT/scripts/plugins/AB/ab_compile_AOSP_Generic;;
+   4) clear; export AOSP_VERSION=froyo; $KITCHEN_ROOT/scripts/plugins/AB/ab_create_repo_froyo; $KITCHEN_ROOT/scripts/plugins/AB/ab_compile_AOSP_Generic;;
    0) exit 1;;
    *) echo "Invalid option"; clear_screen=no;;
  esac

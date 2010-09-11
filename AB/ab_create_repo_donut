@@ -2,7 +2,7 @@
 #Armin Čoralić http://blog.coralic.nl
 # sligthly modified by gnarlyc for Android Builder
 
-if [ -d builder/source/projects/donut/ ]
+if [ -d $KITCHEN_ROOT/builder/source/projects/donut/ ]
    then
       exit 
 fi
@@ -13,19 +13,19 @@ echo Y|sudo apt-get install git-core gnupg flex bison gperf libsdl-dev libesd0-d
 
 echo "Setting up the folders....."
 
-mkdir -p builder/source/projects/donut/
+mkdir -p $KITCHEN_ROOT/builder/source/projects/donut/
 
-if [ ! -d builder/bin ]
+if [ ! -d $KITCHEN_ROOT/builder/bin ]
    then
-      mkdir builder/bin
+      mkdir $KITCHEN_ROOT/builder/bin
 fi
 
-export PATH=$PATH:builder/bin
-curl http://android.git.kernel.org/repo > builder/bin/repo
-chmod a+x builder/bin/repo
+export PATH=$PATH:$KITCHEN_ROOT/builder/bin
+curl http://android.git.kernel.org/repo > $KITCHEN_ROOT/builder/bin/repo
+chmod a+x $KITCHEN_ROOT/builder/bin/repo
 
 echo "Initialize GIT repo....."
-cd builder/source/projects/donut
+cd $KITCHEN_ROOT/builder/source/projects/donut
 repo init -u git://android.git.kernel.org/platform/manifest.git -b donut
 
 echo "Sync repo....."
