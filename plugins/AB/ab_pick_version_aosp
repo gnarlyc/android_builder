@@ -1,0 +1,39 @@
+#!/bin/bash
+
+while :
+do
+ clear
+
+clear_screen=yes
+
+ echo " Select Android version that you would like to build"
+ echo " This will download AOSP source and compile"
+ echo " build the ROM, and place it in the original_update"
+ echo " folder."
+ echo ""
+ echo "  1. Sync AOSP - Cupcake (1.5) repo"
+ echo "  2. Sync AOSP - Donut (1.6) repo"
+ echo "  3. Sync AOSP - Eclair (2.1) repo"
+ echo "  4. Sync AOSP - Froyo (2.2) repo"
+ echo ""
+ echo " 0. Exit"
+ echo ""
+ echo -n "Please enter option number: "
+ read opt
+ case $opt in
+   1) clear; export AOSP_VERSION=cupcake; $KITCHEN_ROOT/scripts/plugins/AB/ab_create_repo_cupcake; $KITCHEN_ROOT/scripts/plugins/AB/ab_compile_AOSP_Generic;;
+   2) clear; export AOSP_VERSION=donut; $KITCHEN_ROOT/scripts/plugins/AB/ab_create_repo_donut; $KITCHEN_ROOT/scripts/plugins/AB/ab_compile_AOSP_Generic;;
+   3) clear; export AOSP_VERSION=eclair; $KITCHEN_ROOT/scripts/plugins/AB/ab_create_repo_eclair; $KITCHEN_ROOT/scripts/plugins/AB/ab_compile_AOSP_Generic;;
+   4) clear; export AOSP_VERSION=froyo; $KITCHEN_ROOT/scripts/plugins/AB/ab_create_repo_froyo; $KITCHEN_ROOT/scripts/plugins/AB/ab_compile_AOSP_Generic;;
+   0) exit 1;;
+   *) echo "Invalid option"; clear_screen=no;;
+ esac
+
+ if [ "$clear_screen" == "yes" ]
+ then
+   echo
+   echo "Press Enter to continue"
+   read enterKey
+ fi
+
+done

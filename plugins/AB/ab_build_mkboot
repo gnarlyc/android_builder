@@ -1,0 +1,52 @@
+#
+# Perform mkboot* operations
+#
+# ripped from dsixda's kitchen... Thanks!
+
+mkbootfs_file=mkbootfs
+mkbootimg_file=mkbootimg
+
+
+if [ -e $KITCHEN_ROOT/tools/mkboot/$mkbootfs_file ]
+then
+  echo "Found $mkbootfs_file"
+else
+  echo
+  echo "Compiling mkbootfs ..."
+  cd $KITCHEN_ROOT/tools/mkboot
+  gcc -o mkbootfs mkbootfs.c
+  cd ../..
+
+  if [ -e $KITCHEN_ROOT/tools/mkboot/$mkbootfs_file ]
+  then
+    echo mkbootfs successfully compiled
+  else
+    echo "Error: mkbootfs not successfully compiled!"
+    exit 0   
+  fi
+fi
+
+if [ -e $KITCHEN_ROOT/tools/mkboot/$mkbootimg_file ]
+then
+  echo "Found $mkbootimg_file"
+else
+  echo
+  echo "Compiling mkbootimg ..."
+  cd tools/mkboot
+  gcc -c rsa.c
+  gcc -c sha.c
+  gcc rsa.o sha.o mkbootimg.c -w -o mkbootimg
+  rm *.o
+  cd ../..
+
+  if [ -e $KITCHEN_ROOT/tools/mkboot/$mkbootimg_file ]
+  then
+    echo mkbootimg successfully compiled
+  else
+    echo "Error: mkbootimg not successfully compiled!"
+    exit 0
+  fi    
+fi
+
+cp $KITCHEN_ROOT/tools/mkboot/$mkbootfs_file $KITCHEN_ROOT/tools/
+cp $KITCHEN_ROOT/tools/mkboot/$mkbootimg_file $KITCHEN_ROOT/tools/

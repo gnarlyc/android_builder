@@ -1,0 +1,42 @@
+#!/bin/sh
+
+mkdir -p proprietary/etc/firmware
+mkdir -p proprietary/etc/wifi
+mkdir -p proprietary/lib/hw
+mkdir -p proprietary/usr/keychars
+mkdir -p proprietary/usr/keylayout
+mkdir -p proprietary/bin
+mkdir -p proprietary/lib/egl
+
+
+./adb pull /system/bin/akmd proprietary/bin/akmd
+chmod 755 proprietary/bin/akmd
+./adb pull /system/lib/hw/lights.msm7k.so proprietary/lib/hw/lights.msm7k.so
+./adb pull /system/lib/hw/sensors.desirec.so proprietary/lib/hw/sensors.desirec.so
+./adb pull /system/usr/keychars/desirec-keypad.kcm.bin proprietary/usr/keychars/desirec.keypad.kcm.bin
+./adb pull /system/usr/keylayout/desirec-keypad.kl proprietary/usr/keylayout/desirec-keypad.kl
+./adb pull /system/etc/wifi/Fw1251r1c.bin proprietary/etc/wifi/Fw1251r1c.bin
+./adb pull /system/etc/firmware/brf6300.bin proprietary/etc/firmware/brf6350.bin
+./adb pull /system/etc/AudioPara4.csv proprietary/etc/AudioPara4.csv
+./adb pull /system/etc/AudioFilter.csv proprietary/etc/AudioFilter.csv
+./adb pull /system/etc/AudioPreProcess.csv proprietary/etc/AudioPreProcess.csv
+./adb pull /system/etc/gps.conf proprietary/etc/gps.conf
+./adb pull /system/etc/vold.conf proprietary/etc/vold.conf
+
+./adb pull /system/lib/egl/libGLES_qcom.so proprietary/lib/egl/libGLES_qcom.so
+
+./adb pull /system/lib/libaudioeq.so proprietary/lib/libaudioeq.so
+./adb pull /system/lib/libgps.so proprietary/lib/libgps.so
+./adb pull /system/lib/libhtc_acoustic.so proprietary/lib/libhtc_acoustic.so
+./adb pull /system/lib/libhtc_ril.so proprietary/lib/libhtc_ril.so
+./adb pull /system/lib/libmm-adspsvc.so proprietary/lib/libmm-adspsvc.so
+./adb pull /system/lib/liboemcamera.so proprietary/lib/liboemcamera.so
+./adb pull /system/lib/libOmxH264Dec.so proprietary/lib/libOmxH264Dec.so
+./adb pull /system/lib/libOmxMpeg4Dec.so proprietary/lib/libOmxMpeg4Dec.so
+./adb pull /system/lib/libOmxVidEnc.so proprietary/lib/libOmxVidEnc.so
+./adb pull /system/lib/libspeech.so proprietary/lib/libspeech.so
+./adb pull /system/lib/libaudio.so proprietary/lib/libaudio.so
+./adb pull /system/lib/libaudioeq.so proprietary/lib/libaudioeq.so
+./adb pull /system/lib/libaudioflinger.so proprietary/lib/libaudioflinger.so
+./adb pull /system/lib/libaudiopolicy.so proprietary/lib/libaudiopolicy.so
+
