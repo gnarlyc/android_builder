@@ -17,9 +17,6 @@
 
 export KITCHEN_ROOT=`pwd` 
 
-sleep 10
-echo $KITCHEN_ROOT
-
 chmod a+x $KITCHEN_ROOT/scripts/plugins/AB/*
 
 export AOSP_VERSION= 
