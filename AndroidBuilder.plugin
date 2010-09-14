@@ -19,6 +19,8 @@ export KITCHEN_ROOT=`pwd`
 
 chmod a+x $KITCHEN_ROOT/scripts/plugins/AB/*
 
+$KITCHEN_ROOT/scripts/plugins/AB/ab_setup
+
 export AOSP_VERSION= 
 export KERNEL_DIR=
 
