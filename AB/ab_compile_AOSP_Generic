@@ -1,6 +1,4 @@
 clear 
-echo "Switching to Java5, which is needed to compile AOSP"
-sudo update-java-alternatives -s java-1.5.0-sun
 
 cd $KITCHEN_ROOT/builder/source/projects/$AOSP_VERSION
 
@@ -22,6 +20,4 @@ rm -r system/wlan
 zip -r $KITCHEN_ROOT/original_update/AOSPbase.zip system/ META-INF/ boot.img
 
 clear
-echo "Switching back to Java6, which is needed in the Kitchen to sign updates"
-sudo update-java-alternatives -s java-6-sun
 

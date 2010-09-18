@@ -7,10 +7,6 @@ if [ -d $KITCHEN_ROOT/builder/source/projects/cupcake/ ]
       exit 
 fi
 
-echo "Installing packages....."
-sudo apt-get install sun-java5-jdk
-echo Y|sudo apt-get install git-core gnupg flex bison gperf libsdl-dev libesd0-dev libwxgtk2.6-dev build-essential zip curl libncurses5-dev zlib1g-dev valgrind
-
 echo "Setting up the folders....."
 
 mkdir -p $KITCHEN_ROOT/builder/source/projects/cupcake/

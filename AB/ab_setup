@@ -14,14 +14,8 @@ if [ ! -f $KITCHEN_ROOT/scripts/plugins/AB/setup_ran ]
       echo "deb http://archive.canonical.com/ lucid partner"
       apt-get update
 
-      echo "Installing Java6 for Kitchen"
-      apt-get install sun-java6-jre
-
-      echo "Configuring Java alternatives"
-      update-alternatives --config java
-      
-      echo "Installing GCC if not installed already"
-      apt-get install gcc
+      echo "Installing repo prereqs if not installed already"
+      apt-get install gcc git-core unzip make sun-java5-jdk gnupg flex bison gperf libsdl-dev libesd0-dev libwxgtk2.6-dev build-essential zip curl libncurses5-dev zlib1g-dev valgrind
 
    else
       exit
