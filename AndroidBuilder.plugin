@@ -30,17 +30,19 @@ clear_screen=yes
 
  echo 
  echo "==================================================================="
- echo " Android Builder 0.4.2 - by gnarlyc (xda-developers.com)"
+ echo " Android Builder 0.5 - by gnarlyc & kiel123 (xda-developers.com)"
 # echo " Android Builder $version - by gnarlyc (xda-developers.com)"
  echo " (This would not be possible without code and help from dsixda," 
  echo " cteneyck, and Armin Coralic.)" 
- echo " Modified By Kiel123"
+ echo ""
+ echo " This plugin currently only works on Linux and has only"
+ echo " been tested on Ubuntu & Debian 5"
  echo "==================================================================="
  echo
  echo " Select the device that you would like to build for."
  echo ""
- echo "  1) Generic AOSP"
- echo "  2) HTC Hero - Droid Eris"
+# echo "  1) Generic AOSP"
+ echo "  1) Droid Eris"
 # echo "  3) HTC Droid Incredible"
 # echo "  4) HTC Dream - G1" 
 # echo "  5) HTC Sapphire - Magic/MyTouch 3G " 
