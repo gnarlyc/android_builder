@@ -59,9 +59,9 @@ clear_screen=yes
  echo -n "Please enter your option: "
  read opt
  case $opt in
-   1) clear; $KITCHEN_ROOT/scripts/plugins/AB/ab_pick_version_aosp;;
-   2) clear; $KITCHEN_ROOT/scripts/plugins/AB/ab_pick_version_eris;;
-   a) clear; $KITCHEN_ROOT/scripts/plugins/AB/ab_about;;
+#   1) clear; $KITCHEN_ROOT/scripts/plugins/AB/ab_pick_version_aosp;;
+   1) clear; $KITCHEN_ROOT/scripts/plugins/AB/ab_pick_version_eris;;
+#   a) clear; $KITCHEN_ROOT/scripts/plugins/AB/ab_about;;
 #  u) clear; $KITCHEN_ROOT/scripts/plugins/AB/ab_update;;
    0) exit 1;;
    *) echo "Invalid option"; clear_screen=no;;
